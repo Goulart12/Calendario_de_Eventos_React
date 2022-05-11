@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import React from "react";
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { EventPage } from "./EventPage";
 import mainImage from "../assets/mainImage.jpg";
 import calendarImg from "../assets/calendar.png";
 
@@ -45,7 +47,7 @@ export function MainPage() {
 
         color: var(--dark-color);
     `
-    const StartButton = styled.a`
+    const StartButton = styled(Link)`
         width: 12.938rem;
         height: 6.25rem;
         margin-top: 4.375rem;
@@ -74,7 +76,7 @@ export function MainPage() {
     `
 
     return (
-        <>
+        <Router>
             <Section>
                 <MainImage src={mainImage} />
 
@@ -83,9 +85,10 @@ export function MainPage() {
                         <TitleImg src={calendarImg} />
                         <Title>Calendário de Eventos</Title>
                     </TitleDiv>
-                    <StartButton href="">Começar</StartButton>
+                    <StartButton to="/events">Começar</StartButton>
                 </TitleButtonDiv>
+
             </Section>
-        </>
+        </Router>
     )
 }
