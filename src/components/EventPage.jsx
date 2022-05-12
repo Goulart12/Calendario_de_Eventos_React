@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { Header } from "./Header"
+import { Table } from "./Table"
 
 
 export function EventPage() {
@@ -14,6 +15,7 @@ export function EventPage() {
     return (
         <Section>
             <Header />
+            <Table />
         </Section>
     )
 }
