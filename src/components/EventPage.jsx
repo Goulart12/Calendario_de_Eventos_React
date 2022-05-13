@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import { Form } from "./Form"
 import { Header } from "./Header"
 import { Table } from "./Table"
 
@@ -16,6 +17,7 @@ export function EventPage() {
         <Section>
             <Header />
             <Table />
+            <Form />
         </Section>
     )
 }

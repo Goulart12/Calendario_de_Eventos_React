@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-import { EventPage } from "./EventPage";
+import { BrowserRouter as Router, Link } from 'react-router-dom';
+//import { EventPage } from "./EventPage";
 import mainImage from "../assets/mainImage.jpg";
 import calendarImg from "../assets/calendar.png";
 
@@ -76,7 +76,7 @@ export function MainPage() {
     `
 
     return (
-        <Router>
+        <>
             <Section>
                 <MainImage src={mainImage} />
 
@@ -89,6 +89,6 @@ export function MainPage() {
                 </TitleButtonDiv>
 
             </Section>
-        </Router>
+        </>
     )
 }
