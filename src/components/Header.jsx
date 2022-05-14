@@ -1,6 +1,7 @@
 import React from "react"
 import calendarImg from '../assets/calendar.png'
 import styled from 'styled-components';
+import { Link } from "react-router-dom";
 
 export function Header() {
     const Header = styled.header`
@@ -31,7 +32,7 @@ export function Header() {
 
         color: var(--dark-color);
     `
-    const LogoutButton = styled.a`
+    const LogoutButton = styled(Link)`
         width: 6.25rem;
         height: 2.5rem;
 
@@ -65,7 +66,7 @@ export function Header() {
                 <Title>Calendário de Eventos</Title>
             </TitleImgDiv>
 
-            <LogoutButton>Sair</LogoutButton>
+            <LogoutButton to="/">Sair</LogoutButton>
         </Header>
     )
 }

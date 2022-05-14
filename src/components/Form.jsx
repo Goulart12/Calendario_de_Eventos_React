@@ -94,6 +94,12 @@ export function Form() {
 
         color: var(--light-color);
         cursor: pointer;
+
+        &:hover {
+            color: var(--dark-color);
+            background-color: var(--light-background);
+            border: 0.125rem solid #7D52C5;
+        }
     `
 
     return (
